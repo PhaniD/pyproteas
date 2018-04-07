@@ -1,0 +1,14 @@
+{
+    "name": "myvideo",
+    "task": "motion_recognition",
+    "arguments":{
+        "dirpath": "/Users/phani/Downloads",
+        "filename": "peopleCounter.avi",
+        "samplingInterval": 2,
+        "frameAreaThreshold": 500
+    },
+    "api":{
+        "userID":"abcd",
+        "authToken":"jhsdfkhasl"
+    }
+}

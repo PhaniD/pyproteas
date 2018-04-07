@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Input Schema",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "name of video or image",
+            "type": "string"
+        },
+        "task":{
+            "description": "image processing task",
+            "enum":[
+                "people_counting",
+                "face_recognition",
+                "motion_recognition"
+            ]
+        },
+        "arguments":{
+            "type": "object",
+            "properties": {
+                "dirpath": {
+                    "description": "direcotry path",
+                    "type": "string"
+                },
+                "filename":{
+                    "description": "video or image file",
+                    "type": "string"
+                },
+                "url": {
+                    "description": "video file link or image url",
+                    "type": "string"
+                },
+                "image":{
+                    "type": "boolean"
+                },
+                "samplingInterval":{
+                    "description": "sampling interval in seconds",
+                    "type": "number"
+                },
+                "frameAreaThreshold":{
+                    "description": "minimum area for detection in pixels",
+                    "type": "number"
+                }
+            }
+        }
+    },
+    "required": [
+        "name",
+        "source",
+        "task"
+    ]
+}
